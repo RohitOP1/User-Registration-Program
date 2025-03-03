@@ -6,8 +6,8 @@ def validate_name(name):
 
 # Test
 first_name = input("Enter First Name: ")
-# last_name = input("Enter Last Name: ")
+last_name = input("Enter Last Name: ")
 
 print("First Name is valid:", validate_name(first_name))
-# print("Last Name is valid:", validate_name(last_name))
+print("Last Name is valid:", validate_name(last_name))
 
