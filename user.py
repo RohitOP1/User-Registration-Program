@@ -1,13 +1,10 @@
 import re
 
-def validate_name(name):
-    pattern = r'^[A-Z][a-zA-Z]{2,}$'
-    return bool(re.match(pattern, name))
+def validate_email(email):
+    pattern = r'^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}(\.[a-zA-Z]{2})?$'
+    return bool(re.match(pattern, email))
 
 # Test
-first_name = input("Enter First Name: ")
-last_name = input("Enter Last Name: ")
-
-print("First Name is valid:", validate_name(first_name))
-print("Last Name is valid:", validate_name(last_name))
+email = input("Enter Email: ")
+print("Email is valid:", validate_email(email))
 
