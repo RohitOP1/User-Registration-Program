@@ -1,12 +1,12 @@
 import re
 
-def validate_password_uc7(password):
-    # Rule 3: Should have at least 1 numeric digit
-    if not re.search(r'\d', password):  # \d matches any digit (0-9)
+def validate_password_uc8(password):
+    # Rule 4: Has exactly 1 special character
+    if not re.search(r'^[^!@#$%^&*()_+\-=\[\]{};:"\\|,.<>/?]*[!@#$%^&*()_+\-=\[\]{};:"\\|,.<>/?][^!@#$%^&*()_+\-=\[\]{};:"\\|,.<>/?]*$', password):
         return False
     return True
 
 # Test
 password = input("Enter Password: ")
-print("Password is valid for UC7:", validate_password_uc7(password))
+print("Password is valid for UC8:", validate_password_uc8(password))
 
