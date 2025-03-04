@@ -1,10 +1,13 @@
 import re
 
-def validate_mobile(mobile):
-    pattern = r'^91\s\d{10}$'
-    return bool(re.match(pattern, mobile))
+def validate_password_uc5(password):
+    # Rule 1: Minimum 8 characters
+    if len(password) < 8:
+        return False
+    return True
 
 # Test
-mobile = input("Enter Mobile Number (91 followed by 10 digits): ")
-print("Mobile Number is valid:", validate_mobile(mobile))
+password = input("Enter Password: ")
+print("Password is valid for UC5:", validate_password_uc5(password))
+
 
